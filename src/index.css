@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #070913 !important;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Continuous CTA Shimmer Sweep */
+@keyframes luxuryShimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+.animate-shimmer-sweep {
+  animation: luxuryShimmer 4s ease-in-out infinite;
+}
+
+/* Gentle Floating Levitation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+/* Custom Luxury Gold Slider */
+input[type="range"].luxury-slider {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type="range"].luxury-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input[type="range"].luxury-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 60%, #d97706 100%);
+  cursor: pointer;
+  margin-top: -7px;
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.6), 0 2px 6px rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"].luxury-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.9);
+}
+
+input[type="range"].luxury-slider::-webkit-slider-thumb:active {
+  transform: scale(1.05);
+}
+
+/* Hardware-Accelerated Progress Bar Transition */
+.luxury-progress-fill {
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  transform: translateZ(0);
+}
